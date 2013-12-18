@@ -5257,7 +5257,7 @@ public class MediaProvider extends ContentProvider {
                 if (Environment.isExternalStorageRemovable()) {
                     final StorageVolume actualVolume = mStorageManager.getPrimaryVolume();
                     String path = mExternalStoragePaths[0];
-                    final int volumeId = actualVolume.getFatVolumeId();
+                    int volumeId = actualVolume.getFatVolumeId();
 
                     // In case of a non-FAT filesystem, try to get the UUID
                     if (volumeId == -1) {
